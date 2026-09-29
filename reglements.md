@@ -2,7 +2,7 @@
 layout: default
 title: "Règlements généraux proposés"
 subtitle: "Cadre de gouvernance démocratique, éthique et sociocratique de COHABITAT.CC"
-description: "Projet de règlements généraux de COHABITAT.CC (personne morale sans but lucratif sous la Partie III). Document ouvert aux propositions d'amendements par Pull Request."
+description: "Projet de règlements généraux de COHABITAT.CC (personne morale sans but lucratif sous la Partie III). Document ouvert aux propositions d'amendements par demande de fusion (pull request)."
 permalink: /reglements/
 image: "/assets/images/cohabitat_concept_banner.jpg"
 ---
@@ -17,7 +17,7 @@ image: "/assets/images/cohabitat_concept_banner.jpg"
     <div class="bylaws-pr-banner">
       <div class="bylaws-pr-icon">🐙</div>
       <div class="bylaws-pr-text">
-        <strong>Document vivant &amp; collaboratif :</strong> Chaque article est modulaire. Tout membre ou partie prenante peut proposer une bonification ou un amendement directement par Pull Request.
+        <strong>Document vivant &amp; collaboratif :</strong> Chaque article est modulaire. Tout membre ou partie prenante peut proposer une bonification ou un amendement directement par demande de fusion (pull request).
       </div>
       <a href="https://github.com/cohabitat-cc/www.cohabitat.cc/tree/main/_reglements" target="_blank" rel="noopener noreferrer" class="bylaws-pr-btn">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: -2px; margin-right: 6px;"><path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z"></path></svg>
@@ -45,7 +45,7 @@ image: "/assets/images/cohabitat_concept_banner.jpg"
           <span>Cadre : <strong>Loi sur les compagnies (Partie III)</strong></span>
           <span style="margin-top: 0.5rem; display: block;">
             <a href="{{ '/gouvernance/' | relative_url }}" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;">
-              Guide du processus par PR &rarr;
+              Guide des demandes de fusion &rarr;
             </a>
           </span>
         </div>
@@ -96,7 +96,7 @@ image: "/assets/images/cohabitat_concept_banner.jpg"
             Consulter le dossier des règlements sur GitHub
           </a>
           <a href="{{ '/gouvernance/' | relative_url }}" class="btn-secondary" style="padding: 0.85rem 1.8rem; border-radius: 9999px; font-weight: 600; text-decoration: none; display: inline-block;">
-            Comprendre le processus de gouvernance par PR
+            Comprendre le processus de gouvernance par demande de fusion (pull request)
           </a>
         </div>
       </div>

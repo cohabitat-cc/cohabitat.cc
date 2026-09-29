@@ -30,7 +30,7 @@ ca/
 
 ---
 
-## 3. Protocole d'adoption d'une résolution par Pull Request (PR)
+## 3. Protocole d'adoption d'une résolution par demande de fusion (pull request)
 
 Pour adopter une résolution par voie asynchrone :
 
@@ -38,7 +38,7 @@ Pour adopter une résolution par voie asynchrone :
    [ 1. Rédaction ]     Un administrateur duplique le modèle dans ca/resolutions/
          │
          ▼
-   [ 2. Dépôt PR ]      Ouverture d'une Pull Request sur la branche 'main'
+   [ 2. Dépôt ]         Ouverture d'une demande de fusion (pull request) sur la branche 'main'
          │
          ▼
    [ 3. Échanges ]      Questions, clarifications ou demandes d'amendements en commentaires
@@ -50,7 +50,7 @@ Pour adopter une résolution par voie asynchrone :
          │
          ▼
    [ 5. Fusion ]        Une fois l'unanimité/le consentement des administrateurs constaté,
-                        la PR est fusionnée (Squash and Merge). La décision est exécutoire.
+                        la demande de fusion (pull request) est fusionnée (Squash and Merge). La décision est exécutoire.
 ```
 
 ---

@@ -27,7 +27,7 @@ Remplissez les différentes rubriques avec le niveau de détail actuellement con
 * **Posture stricte sans voiture individuelle solo** (places pour vélos-cargos et accès à l'autopartage).
 * **Modèle anti-spéculatif** (OBNL Partie III, coopérative de solidarité ou fiducie foncière).
 
-### Étape 3 : Ouvrir une Pull Request sur GitHub
+### Étape 3 : Ouvrir une demande de fusion (pull request) sur GitHub
 1. Créez une branche descriptive : `git checkout -b projet/nom-du-site`
 2. Ajoutez votre fichier et validez :
    ```bash
@@ -35,15 +35,15 @@ Remplissez les différentes rubriques avec le niveau de détail actuellement con
    git commit -m "Ajout du projet de site : Nom du Projet"
    git push origin projet/nom-du-site
    ```
-3. Rendez-vous sur [GitHub](https://github.com/cohabitat-cc/www.cohabitat.cc) et ouvrez une **Pull Request**.
+3. Rendez-vous sur [GitHub](https://github.com/cohabitat-cc/www.cohabitat.cc) et ouvrez une **demande de fusion (pull request)**.
 
 ---
 
 ## Processus d'accueil et d'accompagnement par le Réseau
 
-1. **Revue bienveillante et dialogue :** Les membres du *Cercle Projets & Sites* prennent connaissance de la proposition, posent des questions dans la PR et évaluent les synergies possibles.
+1. **Revue bienveillante et dialogue :** Les membres du *Cercle Projets & Sites* prennent connaissance de la proposition, posent des questions dans la demande de fusion et évaluent les synergies possibles.
 2. **Accompagnement méthodologique :** Accès aux outils de simulation financière et de zonage développés au sein du réseau (ex. [HABILE.ca](https://habile.ca)).
-3. **Mise en visibilité :** Une fois le projet accueilli au sein du réseau (fusion de la PR), une fiche publique est publiée pour aider les porteurs à recruter des co-concevants, des futurs résidents et des souscripteurs d'obligations communautaires.
+3. **Mise en visibilité :** Une fois le projet accueilli au sein du réseau (fusion de la demande de fusion), une fiche publique est publiée pour aider les porteurs à recruter des co-concevants, des futurs résidents et des souscripteurs d'obligations communautaires.
 
 ---
 

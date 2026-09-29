@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<header class="about-hero">
+  <div class="site-container text-center">
+    {% if page.badge %}
+    <div class="about-badge">{{ page.badge }}</div>
+    {% endif %}
+    <h1 class="about-hero-title">{{ page.title }}</h1>
+    {% if page.subtitle or page.tagline %}
+    <p class="about-hero-tagline">{{ page.tagline | default: page.subtitle }}</p>
+    {% endif %}
+  </div>
+</header>
+
+<section class="about-section">
+  <div class="site-container markdown-content">
+    {{ content }}
+  </div>
+</section>

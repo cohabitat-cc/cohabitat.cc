@@ -12,3 +12,6 @@ La gestion courante et l'exécution des projets sont déléguées à des Cercles
 
 ### 5.3 Culture des bilans critiques (post-mortem et cause racine)
 Afin d'apprendre continuellement des expériences et des frictions éventuelles, l'organisation institutionnalise la pratique systématique de bilans critiques constructifs (*post-mortem* bienveillants et analyses des causes racines). Ces bilans ne visent jamais à blâmer des individus, mais à perfectionner les processus et prévenir la récurrence des difficultés.
+
+### 5.4 Subsidiarité et autonomie des politiques de cercles
+En application du principe de subsidiarité, chaque cercle est pleinement compétent pour rédiger, adopter et modifier ses propres chartes d'usage, critères techniques et guides de fonctionnement, pourvu que ceux-ci demeurent conformes aux présents règlements généraux et à la mission de COHABITAT.CC. Ces politiques de cercle sont adoptées par consentement au sein du cercle par voie de demande de fusion (pull request) avec entrée en vigueur immédiate.

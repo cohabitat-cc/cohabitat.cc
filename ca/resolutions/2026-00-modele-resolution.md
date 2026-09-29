@@ -33,8 +33,8 @@ date_adoption: ""
 
 ### REGISTRE DES CONSENTEMENTS ÉCRITS (Art. 89.1)
 
-| Administrateur(trice) | Vote / Consentement | Date | Signature / PR Review ID |
+| Administrateur(trice) | Vote / Consentement | Date | Signature / Revue de la demande de fusion (pull request) |
 | :--- | :--- | :--- | :--- |
-| **Ricky Ng-Adam** | Consentement écrit | AAAA-MM-JJ | [Via PR #XX Approve] |
-| **Claire Buffet** | Consentement écrit | AAAA-MM-JJ | [Via PR #XX Approve] |
-| **Philippe Chartier** | Consentement écrit | AAAA-MM-JJ | [Via PR #XX Approve] |
+| **Ricky Ng-Adam** | Consentement écrit | AAAA-MM-JJ | [Via Demande de fusion #XX Approve] |
+| **Claire Buffet** | Consentement écrit | AAAA-MM-JJ | [Via Demande de fusion #XX Approve] |
+| **Philippe Chartier** | Consentement écrit | AAAA-MM-JJ | [Via Demande de fusion #XX Approve] |

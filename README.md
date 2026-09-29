@@ -6,7 +6,7 @@ COHABITAT.CC est une initiative citoyenne en cours de constitution en personne m
 
 Ce dépôt héberge à la fois :
 1. **Le site web public** accessible à l'adresse [https://cohabitat.cc](https://cohabitat.cc).
-2. **Le texte officiel des règlements généraux proposés**, versionné sous Git afin de permettre à tout membre d'y soumettre des amendements par *Pull Request*.
+2. **Le texte officiel des règlements généraux proposés**, versionné sous Git afin de permettre à tout membre d'y soumettre des amendements par *demande de fusion (pull request)*.
 3. **L'incubateur de projets de sites**, où des fiches de projets concrets de cohabitats peuvent être documentées et proposées par quartier ou terrain ciblé.
 
 ---
@@ -14,7 +14,7 @@ Ce dépôt héberge à la fois :
 ## Sommaire
 
 * [Organisation du répertoire](#organisation-du-répertoire)
-* [Guides de contribution par Pull Request](#guides-de-contribution-par-pull-request)
+* [Guides de contribution par demande de fusion (pull request)](#guides-de-contribution-par-demande-de-fusion-pull-request)
   * [1. Proposer une modification aux règlements généraux](#1-proposer-une-modification-aux-règlements-généraux)
   * [2. Prendre une décision au Conseil d'administration (Résolutions du CA)](#2-prendre-une-décision-au-conseil-dadministration-résolutions-du-ca)
   * [3. Rédiger et publier un article de blogue](#3-rédiger-et-publier-un-article-de-blogue)
@@ -32,7 +32,7 @@ Le projet est propulsé par **Jekyll** (générateur de sites statiques) avec un
 
 ```text
 www.cohabitat.cc/
-├── .github/                # Gabarits de Pull Requests (règlements, résolutions CA)
+├── .github/                # Gabarits de demandes de fusion (règlements, résolutions CA)
 ├── _includes/              # Composants HTML réutilisables (navbar, footer, seo, etc.)
 │   ├── navbar.html         # Menu de navigation principal
 │   ├── seo.html            # Balises meta, Open Graph et Twitter Cards
@@ -48,13 +48,17 @@ www.cohabitat.cc/
 │   │   └── members/        # Photos de profil des membres
 ├── ca/                     # Registre numérique du Conseil d'administration
 │   ├── resolutions/        # Résolutions adoptées et modèle (Art. 89.1 Loi sur les compagnies)
-│   └── README.md           # Cadre légal et signatures électroniques par PR
+│   ├── exec/               # Comité exécutif : délégation de gestion courante (< 5 000 $)
+│   │   ├── README.md       # Politique de délégation et seuils financiers
+│   │   └── decisions/      # Décisions déléguées EXEC-YYYY-XX
+│   └── README.md           # Cadre légal et signatures électroniques par demande de fusion (pull request)
 ├── projets/                # Incubateur de projets et fiches de sites
 │   ├── README.md           # Guide de soumission de projets de sites
 │   └── modele-fiche-projet.md # Gabarit officiel pour un nouveau site
 ├── a-propos.md             # Page À propos : statut légal REQ, 7 objets et gouvernance
 ├── blogue.md               # Page d'accueil du blogue
-├── gouvernance.md          # Guide public de gouvernance par consentement et PR
+├── formation-gouvernance.md # Manuel de gouvernance & Guide de formation des membres
+├── gouvernance.md          # Guide public de gouvernance par consentement et demandes de fusion (pull request)
 ├── index.md                # Page d'accueil principale
 ├── membres.md              # Liste YAML des membres et co-fondateurs
 ├── projets.md              # Page publique de présentation des projets de sites
@@ -67,9 +71,9 @@ www.cohabitat.cc/
 
 ---
 
-## Guides de contribution par Pull Request
+## Guides de contribution par demande de fusion (pull request)
 
-Nous encourageons une **gouvernance ouverte et transparente**. Que vous souhaitiez suggérer une amélioration légale, partager une réflexion sur le blogue, rejoindre l'équipe publique ou proposer un site pour un futur cohabitat, tout passe par une **Pull Request (PR)** sur GitHub.
+Nous encourageons une **gouvernance ouverte et transparente**. Que vous souhaitiez suggérer une amélioration légale, partager une réflexion sur le blogue, rejoindre l'équipe publique ou proposer un site pour un futur cohabitat, tout passe par une **demande de fusion (pull request)** sur GitHub.
 
 ### Workflow Git de base :
 1. Créez un *fork* du dépôt [cohabitat-cc/www.cohabitat.cc](https://github.com/cohabitat-cc/www.cohabitat.cc).
@@ -88,7 +92,7 @@ Nous encourageons une **gouvernance ouverte et transparente**. Que vous souhaiti
    git commit -m "Description claire de votre modification"
    git push origin ma-proposition
    ```
-5. Ouvrez une **Pull Request** sur GitHub vers la branche `main` du dépôt parent.
+5. Ouvrez une **demande de fusion (pull request)** sur GitHub vers la branche `main` du dépôt parent.
 
 ---
 
@@ -100,12 +104,12 @@ Les règlements généraux de COHABITAT.CC sont décomposés en **fichiers Markd
 1. Sur le site à la page [`/reglements/`](https://cohabitat.cc/reglements/), cliquez sur le bouton **« Proposer une modification à cet article »** sous l'article souhaité.
 2. Dans l'éditeur GitHub qui s'ouvre, cliquez sur l'icône de crayon (✏️).
 3. Modifiez directement le texte Markdown (ajoutez ou reformulez des alinéas `### X.Y`).
-4. Cliquez sur **« Propose changes »** puis **« Create Pull Request »** (le gabarit d'amendement s'affichera automatiquement).
+4. Cliquez sur **« Propose changes »** puis **« Create Pull Request » (Créer la demande de fusion)** (le gabarit d'amendement s'affichera automatiquement).
 
 #### Bonnes pratiques :
 * **Un alinéa par clause :** Respectez la syntaxe `### X.Y Titre de la clause` suivie du texte descriptif.
 * **Respecter la numérotation :** Si vous ajoutez une clause, incrémentez logiquement (ex. `### 4.6 Nouvelle clause`).
-* **Motivation dans la PR :** Expliquez la raison d'être de votre proposition (pourquoi ce changement sert la mission de cohabitat.cc).
+* **Motivation dans la demande de fusion :** Expliquez la raison d'être de votre proposition (pourquoi ce changement sert la mission de cohabitat.cc).
 * **Délai sociocratique :** La proposition fait l'objet d'une consultation ouverte d'au moins 14 jours. L'adoption se fait par consentement (absence d'objections raisonnables).
 
 ---
@@ -119,9 +123,9 @@ Conformément à l'**article 89.1 de la Loi sur les compagnies du Québec (Parti
 #### Procédure pour les administrateurs :
 1. Dupliquez le modèle [`ca/resolutions/2026-00-modele-resolution.md`](ca/resolutions/2026-00-modele-resolution.md) sous le nom `ca/resolutions/YYYY-MM-DD-RES-XX-titre.md`.
 2. Complétez les attendus (*ATTENDU QUE*) et les décisions (*IL EST RÉSOLU*).
-3. Ouvrez une Pull Request avec le gabarit dédié `resolution_ca.md`.
+3. Ouvrez une demande de fusion (pull request) avec le gabarit dédié `resolution_ca.md`.
 4. Chaque administrateur enregistre son approbation formelle via GitHub : **Review changes > Approve** avec la mention de consentement légale.
-5. Une fois le consentement de tous les administrateurs obtenu, la PR est fusionnée et la résolution prend immédiatement effet.
+5. Une fois le consentement de tous les administrateurs obtenu, la demande de fusion est fusionnée et la résolution prend immédiatement effet.
 
 ---
 
@@ -207,7 +211,7 @@ Le réseau COHABITAT.CC a vocation à fédérer plusieurs sites à échelle huma
    * **Infrastructures mutualisées** (atelier vélo, grande cuisine partagée, fablab, buanderie écologique, toit cultivé).
    * **Mobilité active** (absence totale de stationnement pour automobile solo, ratios vélos-cargos).
    * **Modèle juridique et financier** (statut OBNL ou coopératif, déspéculation permanente, obligations communautaires).
-4. Soumettez votre proposition via une **Pull Request**. Le *Cercle Projets & Sites* examinera l'initiative pour lui apporter l'appui du réseau.
+4. Soumettez votre proposition via une **demande de fusion (pull request)**. Le *Cercle Projets & Sites* examinera l'initiative pour lui apporter l'appui du réseau.
 
 ---
 

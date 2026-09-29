@@ -21,6 +21,6 @@
 ---
 
 ### ⏳ Processus d'adoption (Rappel de l'Article 9)
-1. **Délai de consultation (14 jours) :** La PR reste ouverte aux commentaires et propositions d'amélioration de tout membre.
+1. **Délai de consultation (14 jours) :** La demande de fusion (pull request) reste ouverte aux commentaires et propositions d'amélioration de tout membre.
 2. **Consentement :** Adoption constatée par absence d'objection raisonnable non levée au sein du Cercle Gouvernance ou de l'Assemblée générale.
 3. **Fusion (Merge) :** Réalisée par un administrateur ou facilitateur du Cercle Gouvernance.

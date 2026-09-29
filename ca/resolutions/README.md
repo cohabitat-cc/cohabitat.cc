@@ -23,6 +23,6 @@ YYYY-MM-DD-RES-XX-nom-court-en-kebab-case.md
 1. Copier le fichier [`2026-00-modele-resolution.md`](2026-00-modele-resolution.md).
 2. Remplir les champs du front matter YAML (`resolution_id`, `titre`, `proposée_par`, etc.).
 3. Rédiger les attendus (*ATTENDU QUE*) et le dispositif de décision (*IL EST RÉSOLU*).
-4. Soumettre la proposition via une Pull Request GitHub en utilisant le gabarit de PR `resolution_ca.md`.
+4. Soumettre la proposition via une demande de fusion (pull request) GitHub en utilisant le gabarit dédié `resolution_ca.md`.
 5. Recueillir le consentement formel par écrit de l'ensemble des administrateurs via l'outil de révision GitHub (*Review > Approve*).
-6. Dès que l'unanimité/consentement est obtenu, fusionner la PR.
+6. Dès que l'unanimité/consentement est obtenu, fusionner la demande de fusion.

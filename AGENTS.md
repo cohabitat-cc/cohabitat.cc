@@ -73,8 +73,7 @@ Ce document compile les règles impératives, conventions éditoriales, architec
   * Primaire : `--color-primary: #064E3B` (Vert forêt profond)
   * Accent : `--color-accent: #C2410C` (Ambre / rouille chaleureux)
   * Fond neutre doux : `--color-secondary: #FAFAF9` (Sable clair)
-  * Texte : `--color-text: #1C1917` (Anthracite chaud)
-* **Astuce Kramdown / HTML :** Dans Jekyll (Kramdown), le markdown inline (`**gras**`) n'est pas interprété à l'intérieur des balises HTML directes (`<div>`, `<p>`). Utilisez `<strong>gras</strong>` directement dans les blocs HTML pour éviter d'afficher des astérisques littéraux.
+* **Règle impérative pour les fichiers Markdown :** Rédigez toujours en **Markdown simplifié pur** (titres `#`, `##`, listes à puces `-`, citations `> `, tableaux `| ... |`). Évitez toute balise HTML (`<div>`, `<section>`, `<p style="...">`) qui nuit à l'édition citoyenne. Utilisez le gabarit `layout: page` qui injecte automatiquement la bannière d'en-tête (Hero) et le conteneur typographique `.markdown-content`.
 
 ---
 
@@ -108,15 +107,15 @@ Ce document compile les règles impératives, conventions éditoriales, architec
 * Décomposé en **fichiers Markdown individuels** dans `_reglements/` (un fichier par article : `01-...md` à `09-...md`).
 * Rédigé en Markdown pur (syntaxe `### X.Y Titre de clause`) sans balises HTML afin de permettre une édition immédiate par n'importe quel contributeur via l'éditeur web GitHub.
 * La page `reglements.md` assemble dynamiquement la collection Jekyll, génère le sommaire latéral et intègre un bouton d'édition directe pour chaque article.
-* L'Article 9 formalise la gouvernance ouverte et la possibilité d'amender les statuts par PR GitHub.
+* L'Article 9 formalise la gouvernance ouverte et la possibilité d'amender les statuts par demande de fusion (pull request) GitHub.
 
-### D. Résolutions du Conseil d'administration (`ca/resolutions/`)
-* Registre numérique formalisé des décisions du CA en vertu de l'article 89.1 de la *Loi sur les compagnies du Québec (Partie III)*.
-* Fichiers nommés `YYYY-MM-DD-RES-XX-titre.md` basés sur le modèle `ca/resolutions/2026-00-modele-resolution.md`.
+### D. Résolutions du Conseil d'administration & Décisions de l'Exécutif (`ca/`)
+* Registre numérique formalisé des décisions du CA (`ca/resolutions/`) en vertu de l'article 89.1 de la *Loi sur les compagnies du Québec (Partie III)*.
+* Délégation de gestion courante (< 5 000 $) au Comité exécutif (`ca/exec/decisions/` avec nomenclature `EXEC-YYYY-XX`).
 * Approbation par écrit via les revues GitHub (*Review > Approve*) valant signature légale.
 
 ### E. Projets et Sites concrets de cohabitats (`projets/`)
-* Gabarit officiel : [`projets/modele-fiche-projet.md`](projets/modele-fiche-projet.md).
+* Gabarit officiel : [`projets/modele-fiche-projet.md`](projets/modele-fiche-projet.md) avec front matter YAML et arrimage aux résolutions CA/Exec.
 * Toute nouvelle proposition de site est versée sous `projets/YYYY-nom-du-projet.md`.
 * Critères obligatoires d'un site : zéro case de stationnement pour auto solo (100 % mobilité active), haute mutualisation (cuisine partagée, atelier vélo), déspéculation permanente (OBNL ou FUS foncière), laïcité stricte.
 
@@ -134,8 +133,10 @@ Ce document compile les règles impératives, conventions éditoriales, architec
 | `_posts/` | Articles du blogue |
 | `_reglements/` | Articles des règlements en Markdown individuel (01 à 09) |
 | `ca/resolutions/` | Registre des résolutions écrites du Conseil d'administration |
-| `.github/` | Gabarits de Pull Request pour règlements et CA |
-| `gouvernance.md` | Guide public de prise de décision par consentement et PR |
+| `ca/exec/` | Décisions déléguées du Comité exécutif (< 5 000 $) |
+| `.github/` | Gabarits de demandes de fusion (pull request) pour règlements et CA |
+| `formation-gouvernance.md` | Manuel de gouvernance & Guide de formation des membres |
+| `gouvernance.md` | Guide public de prise de décision par consentement et demande de fusion |
 | `membres.md` | Liste YAML des fondateurs et membres actifs |
 | `a-propos.md` | Présentation institutionnelle, statut légal REQ et 7 objets |
 | `reglements.md` | Page publique assemblant la collection des règlements |

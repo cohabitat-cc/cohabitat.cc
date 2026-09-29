@@ -15,3 +15,6 @@ La convocation aux assemblées générales est valablement transmise par voie é
 
 ### 7.4 Quorum
 Le quorum aux assemblées générales est constitué par la présence de la majorité simple des membres actifs inscrits, ou par un minimum de cinq (5) membres actifs si le nombre total dépasse dix.
+
+### 7.5 Pouvoir souverain et ratification des règlements généraux
+L'assemblée générale constitue l'instance démocratique souveraine des membres. Conformément à l'article 91 de la *Loi sur les compagnies*, toute modification ou adoption de règlements généraux effectuée par le conseil d'administration doit être soumise pour **ratification formelle lors de la plus prochaine assemblée générale**. À défaut d'être ratifiée par la majorité des membres actifs présents ou votant par voie électronique sécurisée, la modification cesse immédiatement d'être en vigueur. Les membres peuvent également adopter toute décision sans séance par résolution écrite signée de tous les membres en vertu de l'article 98 de la Loi.

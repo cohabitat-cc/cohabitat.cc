@@ -1,7 +1,18 @@
+---
+nom_projet: "[Nom du Projet / Site de Cohabitat]"
+statut: "PROPOSITION" # Paliers : PROPOSITION, ÉTUDE_DE_FAISABILITÉ, ENGAGEMENT_CONTRACTUEL, CHANTIER, HABITÉ
+porteur_initiative: "[Noms des initiateurs]"
+ville_quartier: "[Ville / Quartier, ex: Montréal / Villeray]"
+date_soumission: "AAAA-MM-JJ"
+decision_exec_ref: "" # Ex: "ca/exec/decisions/YYYY-MM-DD-EXEC-XX.md"
+resolution_ca_ref: "" # Ex: "ca/resolutions/YYYY-MM-DD-RES-XX.md"
+ratification_ag_ref: "" # Ex: "AGA 2027" ou "Résolution écrite unanime"
+---
+
 # [Nom du Projet / Site de Cohabitat]
 
 > **Gabarit officiel de proposition de projet pour COHABITAT.CC**  
-> *Copiez ce fichier sous `projets/YYYY-nom-du-projet.md` et soumettez-le via une Pull Request sur [GitHub](https://github.com/cohabitat-cc/www.cohabitat.cc).*
+> *Copiez ce fichier sous `projets/YYYY-nom-du-projet.md` et soumettez-le via une demande de fusion (pull request) sur [GitHub](https://github.com/cohabitat-cc/www.cohabitat.cc).*
 
 ---
 
@@ -18,13 +29,11 @@
   * Courriels / Liens profils : [contact@exemple.org]
   * Équipe locale ou partenaires déjà engagés : [Ex. : Coop d'habitation partenaire, architecte, urbaniste, groupe de voisins]
 * **Statut d'avancement du projet :**
-  * [ ] **Idéation & Constitution du groupe initial** (exploration de faisabilité)
-  * [ ] **Recherche active de terrain ou opportunité foncière identifiée**
-  * [ ] **Négociation / Option d'achat / Offre conditionnelle**
-  * [ ] **Études de faisabilité technique, financière et zonage**
-  * [ ] **Co-conception architecturale et plans préliminaires**
-  * [ ] **Chantier / Rénovation**
-  * [ ] **Milieu de vie habité et actif**
+  * [x] **Palier 1 : Proposition & Émergence citoyenne** (exploration de faisabilité par le Cercle Projets)
+  * [ ] **Palier 2 : Faisabilité autorisée par l'Exécutif** (décision `EXEC-XX` pour études de sol, architecture, zonage)
+  * [ ] **Palier 3 : Engagement contractuel autorisé par le CA** (résolution `RES-XX` pour offre d'achat ou emprunt)
+  * [ ] **Palier 4 : Chantier & Réhabilitation**
+  * [ ] **Palier 5 : Milieu de vie habité et actif**
 
 ---
 
@@ -111,4 +120,15 @@
 
 ---
 
-*Document soumis par Pull Request sur le dépôt officiel de [COHABITAT.CC](https://github.com/cohabitat-cc/www.cohabitat.cc).*
+## 9. Traçabilité des décisions corporatives (Gouvernance)
+
+| Palier d'autorisation | Référence formelle | Statut / Date | Signataires / Officiers |
+| :--- | :--- | :--- | :--- |
+| **Accueil en incubation (Cercle Projets)** | Demande de fusion (pull request) GitHub #... | Adoptée le AAAA-MM-JJ | Cercle Projets & Sites |
+| **Études préliminaires (Exécutif)** | `ca/exec/decisions/EXEC-202X-XX.md` | Montant : X XXX $ | 2 officiers habilités |
+| **Offre / Engagement d'achat (CA)** | `ca/resolutions/RES-202X-XX.md` | Adoptée le AAAA-MM-JJ | Conseil d'administration |
+| **Ratification patrimoniale (AG)** | AGA / Procès-verbal du AAAA-MM-JJ | Ratifiée | Assemblée générale |
+
+---
+
+*Document soumis par demande de fusion (pull request) sur le dépôt officiel de [COHABITAT.CC](https://github.com/cohabitat-cc/www.cohabitat.cc).*
