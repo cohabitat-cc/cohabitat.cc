@@ -104,17 +104,23 @@ Ce document compile les règles impératives, conventions éditoriales, architec
 * Chaque entrée comprend : `name`, `role`, `linkedin`, `avatar` (`/assets/images/members/...`), `bio`, `experience` (liste à puces de 3-4 faits marquants).
 * Les photos d'avatar doivent être carrées (min. 400x400 px).
 
-### C. Règlements généraux (`reglements.md`)
-* Rédigé dans un format **diff-friendly** : un alinéa par ligne afin que toute modification proposée par Pull Request produise un diff Git net et lisible.
-* Numérotation hiérarchique avec identifiants d'ancre HTML (`#art-X-Y`).
+### C. Règlements généraux (`_reglements/` et `reglements.md`)
+* Décomposé en **fichiers Markdown individuels** dans `_reglements/` (un fichier par article : `01-...md` à `09-...md`).
+* Rédigé en Markdown pur (syntaxe `### X.Y Titre de clause`) sans balises HTML afin de permettre une édition immédiate par n'importe quel contributeur via l'éditeur web GitHub.
+* La page `reglements.md` assemble dynamiquement la collection Jekyll, génère le sommaire latéral et intègre un bouton d'édition directe pour chaque article.
 * L'Article 9 formalise la gouvernance ouverte et la possibilité d'amender les statuts par PR GitHub.
 
-### D. Projets et Sites concrets de cohabitats (`projets/`)
+### D. Résolutions du Conseil d'administration (`ca/resolutions/`)
+* Registre numérique formalisé des décisions du CA en vertu de l'article 89.1 de la *Loi sur les compagnies du Québec (Partie III)*.
+* Fichiers nommés `YYYY-MM-DD-RES-XX-titre.md` basés sur le modèle `ca/resolutions/2026-00-modele-resolution.md`.
+* Approbation par écrit via les revues GitHub (*Review > Approve*) valant signature légale.
+
+### E. Projets et Sites concrets de cohabitats (`projets/`)
 * Gabarit officiel : [`projets/modele-fiche-projet.md`](projets/modele-fiche-projet.md).
 * Toute nouvelle proposition de site est versée sous `projets/YYYY-nom-du-projet.md`.
 * Critères obligatoires d'un site : zéro case de stationnement pour auto solo (100 % mobilité active), haute mutualisation (cuisine partagée, atelier vélo), déspéculation permanente (OBNL ou FUS foncière), laïcité stricte.
 
-### E. Métadonnées SEO & Réseaux sociaux (`_includes/seo.html`)
+### F. Métadonnées SEO & Réseaux sociaux (`_includes/seo.html`)
 * Domaine de référence absolu : `https://cohabitat.cc`.
 * Les balises `og:image` et `og:url` doivent toujours être absolues pour que Facebook, LinkedIn et GitHub les prévisualisent correctement.
 * Les chemins d'images doivent être protégés avec `uri_escape` pour éviter tout rejet dû à des espaces ou caractères spéciaux.
@@ -126,9 +132,13 @@ Ce document compile les règles impératives, conventions éditoriales, architec
 | Fichier / Dossier | Description |
 | :--- | :--- |
 | `_posts/` | Articles du blogue |
+| `_reglements/` | Articles des règlements en Markdown individuel (01 à 09) |
+| `ca/resolutions/` | Registre des résolutions écrites du Conseil d'administration |
+| `.github/` | Gabarits de Pull Request pour règlements et CA |
+| `gouvernance.md` | Guide public de prise de décision par consentement et PR |
 | `membres.md` | Liste YAML des fondateurs et membres actifs |
 | `a-propos.md` | Présentation institutionnelle, statut légal REQ et 7 objets |
-| `reglements.md` | Règlements généraux proposés (versionnés en Markdown) |
+| `reglements.md` | Page publique assemblant la collection des règlements |
 | `projets/` | Gabarit et fiches de sites de cohabitats modulaires |
 | `projets.md` | Page publique de présentation des projets |
 | `_includes/navbar.html` | Menu de navigation principal |
@@ -137,3 +147,4 @@ Ce document compile les règles impératives, conventions éditoriales, architec
 | `style.css` | Feuille de style principale |
 | `README.md` | Documentation publique et guide des contributeurs |
 | `walkthrough.md` | Journal de bord des changements et étapes complétées |
+

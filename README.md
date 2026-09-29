@@ -16,9 +16,10 @@ Ce dépôt héberge à la fois :
 * [Organisation du répertoire](#organisation-du-répertoire)
 * [Guides de contribution par Pull Request](#guides-de-contribution-par-pull-request)
   * [1. Proposer une modification aux règlements généraux](#1-proposer-une-modification-aux-règlements-généraux)
-  * [2. Rédiger et publier un article de blogue](#2-rédiger-et-publier-un-article-de-blogue)
-  * [3. Ajouter ou mettre à jour un profil de membre](#3-ajouter-ou-mettre-à-jour-un-profil-de-membre)
-  * [4. Proposer un projet concret de cohabitat à un site spécifique](#4-proposer-un-projet-concret-de-cohabitat-à-un-site-spécifique)
+  * [2. Prendre une décision au Conseil d'administration (Résolutions du CA)](#2-prendre-une-décision-au-conseil-dadministration-résolutions-du-ca)
+  * [3. Rédiger et publier un article de blogue](#3-rédiger-et-publier-un-article-de-blogue)
+  * [4. Ajouter ou mettre à jour un profil de membre](#4-ajouter-ou-mettre-à-jour-un-profil-de-membre)
+  * [5. Proposer un projet concret de cohabitat à un site spécifique](#5-proposer-un-projet-concret-de-cohabitat-à-un-site-spécifique)
 * [Démarrage et développement local](#démarrage-et-développement-local)
 * [Éthique et principes fondamentaux](#éthique-et-principes-fondamentaux)
 * [Licence](#licence)
@@ -31,6 +32,7 @@ Le projet est propulsé par **Jekyll** (générateur de sites statiques) avec un
 
 ```text
 www.cohabitat.cc/
+├── .github/                # Gabarits de Pull Requests (règlements, résolutions CA)
 ├── _includes/              # Composants HTML réutilisables (navbar, footer, seo, etc.)
 │   ├── navbar.html         # Menu de navigation principal
 │   ├── seo.html            # Balises meta, Open Graph et Twitter Cards
@@ -40,20 +42,25 @@ www.cohabitat.cc/
 │   ├── post.html           # Layout des articles de blogue
 │   └── members.html        # Layout de la page membres
 ├── _posts/                 # Articles de blogue (format : YYYY-MM-DD-titre.md)
+├── _reglements/            # Articles modulaires des règlements (fichiers Markdown individuels)
 ├── assets/                 # Fichiers statiques
 │   ├── images/             # Images, bannières et schémas conceptuels
 │   │   └── members/        # Photos de profil des membres
+├── ca/                     # Registre numérique du Conseil d'administration
+│   ├── resolutions/        # Résolutions adoptées et modèle (Art. 89.1 Loi sur les compagnies)
+│   └── README.md           # Cadre légal et signatures électroniques par PR
 ├── projets/                # Incubateur de projets et fiches de sites
 │   ├── README.md           # Guide de soumission de projets de sites
 │   └── modele-fiche-projet.md # Gabarit officiel pour un nouveau site
 ├── a-propos.md             # Page À propos : statut légal REQ, 7 objets et gouvernance
 ├── blogue.md               # Page d'accueil du blogue
+├── gouvernance.md          # Guide public de gouvernance par consentement et PR
 ├── index.md                # Page d'accueil principale
 ├── membres.md              # Liste YAML des membres et co-fondateurs
 ├── projets.md              # Page publique de présentation des projets de sites
-├── reglements.md           # Règlements généraux proposés (versionnés en Markdown)
+├── reglements.md           # Page publique des règlements généraux (assemble _reglements/)
 ├── style.css               # Feuille de style principale (Vanilla CSS moderne)
-├── _config.yml             # Paramètres globaux du site Jekyll et SEO
+├── _config.yml             # Paramètres globaux du site Jekyll et collections
 ├── flake.nix / flake.lock  # Environnement Nix pour le développement local
 └── .envrc                  # Intégration Direnv pour Nix
 ```
@@ -87,17 +94,38 @@ Nous encourageons une **gouvernance ouverte et transparente**. Que vous souhaiti
 
 ### 1. Proposer une modification aux règlements généraux
 
-Le fichier [`reglements.md`](reglements.md) contient le projet de règlements généraux de COHABITAT.CC. Il est rédigé de façon granulaire pour faciliter les revues de code et de texte (*diffs*).
+Les règlements généraux de COHABITAT.CC sont décomposés en **fichiers Markdown individuels** dans le dossier [`_reglements/`](_reglements/) (un fichier par article).
+
+#### Procédure simplifiée (sans Git local) :
+1. Sur le site à la page [`/reglements/`](https://cohabitat.cc/reglements/), cliquez sur le bouton **« Proposer une modification à cet article »** sous l'article souhaité.
+2. Dans l'éditeur GitHub qui s'ouvre, cliquez sur l'icône de crayon (✏️).
+3. Modifiez directement le texte Markdown (ajoutez ou reformulez des alinéas `### X.Y`).
+4. Cliquez sur **« Propose changes »** puis **« Create Pull Request »** (le gabarit d'amendement s'affichera automatiquement).
 
 #### Bonnes pratiques :
-* **Un alinéa par ligne :** Évitez de regrouper plusieurs paragraphes en un seul bloc de texte. Cela permet de commenter des lignes précises dans la PR GitHub.
-* **Respecter la numérotation :** Si vous ajoutez un article, respectez la hiérarchie existante (ex. `Clause 5.4`).
-* **Motivation dans la description de la PR :** Expliquez la raison d'être de votre proposition (ex. clarification d'une procédure de médiation, ajustement sociocratique, précision sur les cercles).
-* **Processus d'adoption :** La proposition est discutée par les pairs. Une fois le consentement constaté (absence d'objections raisonnables), la PR est fusionnée et le texte mis à jour automatiquement sur le site web.
+* **Un alinéa par clause :** Respectez la syntaxe `### X.Y Titre de la clause` suivie du texte descriptif.
+* **Respecter la numérotation :** Si vous ajoutez une clause, incrémentez logiquement (ex. `### 4.6 Nouvelle clause`).
+* **Motivation dans la PR :** Expliquez la raison d'être de votre proposition (pourquoi ce changement sert la mission de cohabitat.cc).
+* **Délai sociocratique :** La proposition fait l'objet d'une consultation ouverte d'au moins 14 jours. L'adoption se fait par consentement (absence d'objections raisonnables).
 
 ---
 
-### 2. Rédiger et publier un article de blogue
+### 2. Prendre une décision au Conseil d'administration (Résolutions du CA)
+
+Le Conseil d'administration consigne ses décisions officielles dans le registre [`ca/resolutions/`](ca/resolutions/).
+
+Conformément à l'**article 89.1 de la Loi sur les compagnies du Québec (Partie III)**, les résolutions écrites approuvées par l'ensemble des administrateurs ont la même valeur légale qu'une résolution adoptée en réunion formelle.
+
+#### Procédure pour les administrateurs :
+1. Dupliquez le modèle [`ca/resolutions/2026-00-modele-resolution.md`](ca/resolutions/2026-00-modele-resolution.md) sous le nom `ca/resolutions/YYYY-MM-DD-RES-XX-titre.md`.
+2. Complétez les attendus (*ATTENDU QUE*) et les décisions (*IL EST RÉSOLU*).
+3. Ouvrez une Pull Request avec le gabarit dédié `resolution_ca.md`.
+4. Chaque administrateur enregistre son approbation formelle via GitHub : **Review changes > Approve** avec la mention de consentement légale.
+5. Une fois le consentement de tous les administrateurs obtenu, la PR est fusionnée et la résolution prend immédiatement effet.
+
+---
+
+### 3. Rédiger et publier un article de blogue
 
 Les articles de blogue sont situés dans le dossier `_posts/`.
 
@@ -138,7 +166,7 @@ Vous pouvez insérer des sous-titres (`##`), des listes à puces, des citations 
 
 ---
 
-### 3. Ajouter ou mettre à jour un profil de membre
+### 4. Ajouter ou mettre à jour un profil de membre
 
 La liste des membres et co-fondateurs est centralisée dans le fichier [`membres.md`](membres.md).
 
@@ -163,7 +191,7 @@ La liste des membres et co-fondateurs est centralisée dans le fichier [`membres
 
 ---
 
-### 4. Proposer un projet concret de cohabitat à un site spécifique
+### 5. Proposer un projet concret de cohabitat à un site spécifique
 
 Le réseau COHABITAT.CC a vocation à fédérer plusieurs sites à échelle humaine (modèle modulaire). Si vous avez repéré un terrain, un immeuble à requalifier ou si vous réunissez un groupe de citoyens autour d'un quartier :
 

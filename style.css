@@ -2187,6 +2187,45 @@ body.site-body {
     line-height: 1.6;
 }
 
+/* Bouton de proposition d'amendement par article */
+.article-edit-bar {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.article-edit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--color-primary);
+    background: rgba(6, 78, 59, 0.05);
+    border: 1px solid rgba(6, 78, 59, 0.2);
+    border-radius: 9999px;
+    padding: 0.35rem 0.95rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.article-edit-btn:hover {
+    background: var(--color-primary);
+    color: #ffffff;
+    border-color: var(--color-primary);
+    box-shadow: 0 2px 8px rgba(6, 78, 59, 0.15);
+}
+
+/* Fallback typographique si JS inactif */
+.bylaws-article-body h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+    color: var(--color-accent);
+}
+
+
+
 /* Lien icône LinkedIn inline */
 .linkedin-icon-link {
     display: inline-flex;
