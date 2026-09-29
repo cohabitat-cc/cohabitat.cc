@@ -136,6 +136,7 @@ Ce document compile les règles impératives, conventions éditoriales, architec
 | `ca/exec/` | Décisions déléguées du Comité exécutif (< 5 000 $) |
 | `.github/` | Gabarits de demandes de fusion (pull request) pour règlements et CA |
 | `formation-gouvernance.md` | Manuel de gouvernance & Guide de formation des membres |
+| `organisation.md` | Structure organisationnelle, délégation des pouvoirs et 5 paliers |
 | `gouvernance.md` | Guide public de prise de décision par consentement et demande de fusion |
 | `membres.md` | Liste YAML des fondateurs et membres actifs |
 | `a-propos.md` | Présentation institutionnelle, statut légal REQ et 7 objets |

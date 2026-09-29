@@ -10,6 +10,8 @@ image: "/assets/images/cohabitat_concept_banner.jpg"
 
 Chez **COHABITAT.CC**, nos statuts, nos règlements et les décisions de notre Conseil d'administration sont gérés en code ouvert sous contrôle de version, accessibles et modifiables par consentement.
 
+> 🏛️ Pour une vue d'ensemble de la hiérarchie institutionnelle (Assemblée générale, CA, Exécutif, Cercles et Projets), consultez notre page **[Organisation & Structure]({{ '/organisation/' | relative_url }})**.
+
 ---
 
 ## Pourquoi une gouvernance par demande de fusion (pull request) ?

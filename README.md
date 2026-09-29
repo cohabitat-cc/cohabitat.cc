@@ -59,6 +59,7 @@ www.cohabitat.cc/
 ├── blogue.md               # Page d'accueil du blogue
 ├── formation-gouvernance.md # Manuel de gouvernance & Guide de formation des membres
 ├── gouvernance.md          # Guide public de gouvernance par consentement et demandes de fusion (pull request)
+├── organisation.md         # Page publique de l'écosystème organisationnel et des 5 paliers
 ├── index.md                # Page d'accueil principale
 ├── membres.md              # Liste YAML des membres et co-fondateurs
 ├── projets.md              # Page publique de présentation des projets de sites

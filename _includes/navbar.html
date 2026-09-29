@@ -1,6 +1,6 @@
 <nav class="site-navbar" aria-label="Navigation principale">
   <div class="site-container navbar-inner">
-    <a href="{{ '/' | relative_url }}" class="navbar-brand">
+    <a href="{{ '/' | relative_url }}" class="navbar-brand" title="COHABITAT.CC — Accueil">
       <img src="{{ '/android-chrome-192x192.png' | relative_url }}" alt="Logo" class="navbar-logo" width="32" height="32">
       <span class="navbar-brand-text">COHABITAT<span class="brand-accent">.CC</span></span>
     </a>
@@ -20,9 +20,9 @@
 
     <div class="navbar-menu" id="navbar-menu">
       <div class="navbar-nav">
-        <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Accueil</a>
         <a href="{{ '/a-propos/' | relative_url }}" class="nav-link {% if page.url contains '/a-propos' %}active{% endif %}">À propos</a>
-        <a href="{{ '/reglements/' | relative_url }}" class="nav-link {% if page.url contains '/reglements' %}active{% endif %}">Règlements</a>
+        <a href="{{ '/organisation/' | relative_url }}" class="nav-link {% if page.url contains '/organisation' or page.url contains '/reglements' or page.url contains '/gouvernance' %}active{% endif %}">Organisation</a>
+        <a href="{{ '/formation/' | relative_url }}" class="nav-link {% if page.url contains '/formation' %}active{% endif %}">Formation</a>
         <a href="{{ '/projets/' | relative_url }}" class="nav-link {% if page.url contains '/projets' %}active{% endif %}">Projets</a>
         <a href="{{ '/membres/' | relative_url }}" class="nav-link {% if page.url contains '/membres' %}active{% endif %}">Membres</a>
         <a href="{{ '/blogue/' | relative_url }}" class="nav-link {% if page.url contains '/blogue' or page.layout == 'post' %}active{% endif %}">Blogue</a>
