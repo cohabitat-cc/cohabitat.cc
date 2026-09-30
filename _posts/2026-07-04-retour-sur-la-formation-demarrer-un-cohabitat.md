@@ -8,6 +8,10 @@ categories: [communaute, cohabitat]
 tags: [cohabitat-quebec, habitat-participatif, formation, la-friche-solidaire, montreal, huntingdon, new-richmond, quebec]
 image: "/assets/images/2026-07-04 formation de Cohabitat Québec.jpg"
 image_caption: "Groupe des participantes et participants à la formation « Démarrer un cohabitat » à Cohabitat Québec le 4 juillet 2026."
+linkedin_image: "/assets/images/og-formation-demarrer-cohabitat.jpg"
+og_image: "/assets/images/og-formation-demarrer-cohabitat.jpg"
+linkedin_image_width: 1200
+linkedin_image_height: 627
 description: "Le 4 juillet 2026, retour d'expérience sur la formation « Démarrer un cohabitat » à Cohabitat Québec : 13 ans de vécu, 23 ans d'histoire et un panorama inspirant de projets à travers le Québec."
 ---
 

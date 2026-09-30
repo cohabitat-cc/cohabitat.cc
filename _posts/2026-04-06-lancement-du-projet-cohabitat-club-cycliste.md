@@ -8,6 +8,10 @@ categories: [communaute, lancement]
 tags: [lancement, petite-patrie, espace-des-possibles, lykka, club-cycliste, co-conception, montreal]
 image: "/assets/images/habitation-plan-francais.png"
 image_caption: "Schéma conceptuel initial de cohabitat.cc présenté lors de la soirée de lancement à l'Espace des Possibles."
+linkedin_image: "/assets/images/og-habitation-plan.jpg"
+og_image: "/assets/images/og-habitation-plan.jpg"
+linkedin_image_width: 1200
+linkedin_image_height: 627
 description: "Récit et retours de la soirée de lancement de cohabitat.cc tenue le 6 avril 2026 à l'Espace des Possibles : vision, retours des participants et prochaines étapes."
 ---
 

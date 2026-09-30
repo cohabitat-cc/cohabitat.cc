@@ -5,6 +5,8 @@ description: "Réseau et ressources pour l'habitat partagé et les communs urbai
 url: "https://cohabitat.cc"
 baseurl: ""
 image: "/assets/images/cohabitat_concept_banner.jpg"
+og_image: "/assets/images/og-cohabitat-concept.jpg"
+linkedin_image: "/assets/images/og-cohabitat-concept.jpg"
 markdown: kramdown
 kramdown:
   input: GFM
