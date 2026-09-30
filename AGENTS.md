@@ -29,6 +29,11 @@ Ce document compile les règles impératives, conventions éditoriales, architec
      LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 nix-shell -p jekyll --run "jekyll serve --host 127.0.0.1 --port 4000"
      ```
    * En arrière-plan, un processus démon Jekyll surveille le répertoire et regénère les fichiers en ~30 ms dès qu'un fichier est modifié.
+3. **Environnement Python (.venv) :**
+   * Un environnement virtuel `.venv` est configuré à la racine du projet (`.venv/`).
+   * Toujours exécuter les commandes, scripts et outils Python via cet environnement virtuel (ex. `.venv/bin/python`, `.venv/bin/pip` ou `source .venv/bin/activate`) de façon consistante, plutôt que d'invoquer le `python3` global du système.
+4. **Environnement Nix et dépendances :**
+   * Utiliser Nix / `nix-shell` (ou `direnv` / `flake.nix`) pour exécuter et charger de manière consistante les dépendances de développement (Jekyll, packages, etc.) afin d'isoler l'environnement sans dépendre d'installations globales ou d'états machine non reproductibles.
 
 ---
 
