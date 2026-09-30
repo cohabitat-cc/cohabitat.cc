@@ -6,8 +6,10 @@ date: 2026-09-30 09:00:00 -0400
 author: "Ricky Ng-Adam"
 categories: [construction, innovation]
 tags: [batimatech, construction, innovation, productivite, prefabrication, lean-construction, formation, ccq, quebec, montreal]
-image: "/assets/images/batimatech/batimatech-livre-blanc-demain-se-construit-aujourdhui.png"
-image_caption: "Grand Batimatech 2026 au Palais des congrès de Montréal : dévoilement du livre blanc « Demain se construit aujourd'hui »."
+image: "/assets/images/batimatech/grand_batimatech.png"
+image_caption: "11e édition du Grand Batimatech au Palais des congrès de Montréal : « Demain se décide aujourd'hui »."
+image_width: 2160
+image_height: 1080
 description: "Retour sur la première journée du Grand Batimatech au Palais des congrès de Montréal : constat du livre blanc sur la productivité, panels d'experts et rôle stratégique de la préfabrication."
 ---
 
@@ -19,7 +21,10 @@ Retour sur la première journée du Grand [Batimatech](https://www.linkedin.com/
 
 ### Le constat du livre blanc de Batimatech
 
-Le constat du [livre blanc de Batimatech](https://www.batimatech.com/article-livre-blanc-demain-se-construit-aujourdhui/) dresse un diagnostic sans détour de l'état de l'industrie :
+![Dévoilement du premier livre blanc de Batimatech : « Demain se construit aujourd'hui »]({{ '/assets/images/batimatech/batimatech-livre-blanc-demain-se-construit-aujourdhui.png' | relative_url }})
+*Dévoilement officiel du livre blanc « Demain se construit aujourd'hui » lors du Grand Batimatech 2026.*
+
+À l'occasion de cette 11ᵉ édition, [Batimatech](https://www.batimatech.com/) a dévoilé son premier [livre blanc](https://www.batimatech.com/article-livre-blanc-demain-se-construit-aujourdhui/), intitulé *« Demain se construit aujourd'hui : Productivité, innovation et abordabilité dans l'industrie de la construction »*. Ce document dresse un diagnostic sans détour de l'état de l'industrie :
 
 * **Croissance anémique :** La productivité dans la construction ne progresse que de **0,21 % par an**, contre **1,44 % dans les services**.
 * **Retard numérique :** **25 % des entreprises** n'utilisent aucune technologie de l'information, et moins de **2 %** recourent à la robotique ou à l'intelligence artificielle.
