@@ -12,8 +12,8 @@ image_width: 2160
 image_height: 1080
 linkedin_image: "/assets/images/batimatech/og-grand-batimatech.jpg"
 og_image: "/assets/images/batimatech/og-grand-batimatech.jpg"
-linkedin_image_width: 1200
-linkedin_image_height: 627
+linkedin_image_width: 2064
+linkedin_image_height: 1080
 description: "Retour sur la première journée du Grand Batimatech au Palais des congrès de Montréal : constat du livre blanc sur la productivité, panels d'experts et rôle stratégique de la préfabrication."
 ---
 

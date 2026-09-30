@@ -155,6 +155,11 @@ categories: [communaute, mobilite]      # Ex: communaute, mobilite, urbanisme, g
 tags: [velo, fablab, montreal, cohabitat]
 image: "/assets/images/nom-de-votre-image.jpg"
 image_caption: "Légende descriptive de l'image d'en-tête."
+# Image de partage social dédiée (recommandé si l'image de l'article n'est pas au format paysage 1.91:1) :
+linkedin_image: "/assets/images/og-nom-de-votre-image.jpg"
+og_image: "/assets/images/og-nom-de-votre-image.jpg"
+linkedin_image_width: 1200
+linkedin_image_height: 627
 description: "Résumé concis (1 à 2 phrases) pour les moteurs de recherche et les partages Facebook/LinkedIn."
 ---
 
@@ -164,10 +169,13 @@ Vous pouvez insérer des sous-titres (`##`), des listes à puces, des citations 
 ![Légende alternative]({{ '/assets/images/autre-image.jpg' | relative_url }})
 ```
 
-#### Recommandations pour les images :
-* Déposez les images d'illustration dans `assets/images/`.
-* Privilégiez des noms de fichiers sans espaces ni caractères accentués (ex. `atelier_velo_2026.jpg`).
-* Utilisez la balise Liquid `{{ '/assets/images/... ' | relative_url }}` pour assurer la validité des liens.
+#### Recommandations pour les images et le partage LinkedIn / réseaux sociaux :
+* **Déposez les images** dans `assets/images/` (ou un sous-dossier comme `assets/images/nom-thematique/`).
+* **Nomenclature ASCII pure :** Privilégiez des noms de fichiers en minuscules, sans espaces ni caractères accentués (ex. `og-atelier-velo-2026.jpg`).
+* **Format optimal pour LinkedIn :** Ratio **1.91:1** (`1200 × 627 px`), poids inférieur à **5 Mo** (idéalement 100 à 300 Ko), format **JPG ou PNG** (éviter WebP pour les aperçus sociaux).
+* **Découplage de l'image de partage :** Si votre image d'article (`image:`) est une capture de document ou un schéma vertical, spécifiez un bandeau horizontal dédié via `linkedin_image:`.
+* **Utilisez la balise Liquid** `{{ '/assets/images/... ' | relative_url }}` dans le texte Markdown pour assurer la validité des liens d'images.
+* **Purge du cache LinkedIn :** Après publication en ligne, utilisez le **[LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/)** pour rafraîchir immédiatement l'aperçu et bypasser le cache de 7 jours.
 
 ---
 

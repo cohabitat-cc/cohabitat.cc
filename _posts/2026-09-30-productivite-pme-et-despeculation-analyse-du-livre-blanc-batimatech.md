@@ -10,10 +10,10 @@ image: "/assets/images/batimatech/batimatech-structure-pme-construction-quebec.p
 image_caption: "Structure des entreprises de construction au Québec : 78 % comptent 5 employés ou moins (CCQ / Livre blanc Batimatech 2026)."
 image_width: 1024
 image_height: 906
-linkedin_image: "/assets/images/batimatech/og-batimatech-livre-blanc.jpg"
-og_image: "/assets/images/batimatech/og-batimatech-livre-blanc.jpg"
-linkedin_image_width: 1200
-linkedin_image_height: 627
+linkedin_image: "/assets/images/batimatech/og-batimatech-livre-blanc.png"
+og_image: "/assets/images/batimatech/og-batimatech-livre-blanc.png"
+linkedin_image_width: 2400
+linkedin_image_height: 1256
 description: "Analyse approfondie du livre blanc 2026 de Batimatech dans le contexte de COHABITAT.CC : adapter les appels d'offres aux 22 000 PME d'ici, coordonner en gouvernance ouverte et déspéculer le sol pour briser le cycle r > g."
 ---
 
