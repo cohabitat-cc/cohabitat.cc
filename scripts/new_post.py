@@ -8,6 +8,7 @@ au format 1200x627 via Pillow et structure le Markdown selon les conventions d'A
 import os
 import sys
 import re
+import shutil
 import argparse
 from datetime import datetime
 from pathlib import Path
@@ -37,6 +38,8 @@ def create_post(
     image_caption: str = "",
     description: str = "",
     quote: str = "",
+    body: str = "",
+    body_file: str = None,
     base_dir: str = None
 ) -> str:
     if not base_dir:
@@ -47,6 +50,8 @@ def create_post(
     base_dir = Path(base_dir).resolve()
     posts_dir = base_dir / "_posts"
     posts_dir.mkdir(parents=True, exist_ok=True)
+    images_dir = base_dir / "assets" / "images"
+    images_dir.mkdir(parents=True, exist_ok=True)
 
     if not date_str:
         now = datetime.now()
@@ -79,6 +84,14 @@ def create_post(
             src_img = (base_dir / image_path.lstrip("/")).resolve()
 
         if src_img.exists():
+            # Si l'image source se trouve hors de base_dir/assets/images (ex: dossier brain d'antigravity),
+            # la copier automatiquement dans assets/images/ avec un nom propre
+            if not str(src_img).startswith(str(images_dir)):
+                dest_img_name = f"{slug}{src_img.suffix.lower()}"
+                target_img = images_dir / dest_img_name
+                shutil.copy2(src_img, target_img)
+                src_img = target_img
+
             # Trouver chemin relatif /assets/...
             parts = src_img.parts
             if "assets" in parts:
@@ -106,7 +119,17 @@ def create_post(
                 print(f"⚠️ Avertissement lors de la génération de l'image sociale : {e}", file=sys.stderr)
 
     desc = description or (subtitle if subtitle else title)
-    quote_text = quote or "« Citation d'exergue ou résumé percutant de la thèse de l'article. »"
+    quote_text = quote.strip("«»").strip() if quote else ""
+
+    # Charger le corps du texte
+    body_content = ""
+    if body_file:
+        bf = Path(body_file).resolve()
+        if bf.exists():
+            with open(bf, "r", encoding="utf-8") as f:
+                body_content = f.read().strip()
+    elif body:
+        body_content = body.strip()
 
     content = f"""---
 layout: post
@@ -129,9 +152,14 @@ tags: [{', '.join(tags_list)}]
     content += f"""description: "{desc}"
 ---
 
-> **« {quote_text.strip('«»').strip()} »**
+"""
+    if quote_text and not body_content.startswith("> **«"):
+        content += f"> **« {quote_text} »**\n\n"
 
-Introduction de l'article présentant le contexte, les enjeux et les acteurs impliqués.
+    if body_content:
+        content += body_content + "\n"
+    else:
+        content += """Introduction de l'article présentant le contexte, les enjeux et les acteurs impliqués.
 
 ---
 
@@ -164,10 +192,12 @@ def main():
     parser.add_argument("--author", default="Ricky Ng-Adam", help="Auteur de l'article")
     parser.add_argument("--categories", nargs="*", default=None, help="Catégories (ex: habitation innovation)")
     parser.add_argument("--tags", nargs="*", default=None, help="Mots-clés (ex: batimatech productivite)")
-    parser.add_argument("--image", default=None, help="Chemin vers l'image principale")
+    parser.add_argument("--image", default=None, help="Chemin vers l'image principale (locale ou externe)")
     parser.add_argument("--caption", default="", help="Légende de l'image")
     parser.add_argument("--desc", default="", help="Description pour le SEO et le partage")
     parser.add_argument("--quote", default="", help="Citation d'exergue introductive")
+    parser.add_argument("--body", default="", help="Corps Markdown complet de l'article")
+    parser.add_argument("--body-file", default=None, help="Fichier contenant le corps Markdown de l'article")
 
     args = parser.parse_args()
     try:
@@ -181,7 +211,9 @@ def main():
             image_path=args.image,
             image_caption=args.caption,
             description=args.desc,
-            quote=args.quote
+            quote=args.quote,
+            body=args.body,
+            body_file=args.body_file
         )
     except Exception as e:
         print(f"❌ Erreur : {e}", file=sys.stderr)
@@ -189,3 +221,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
