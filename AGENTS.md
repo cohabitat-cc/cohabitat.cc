@@ -2,7 +2,7 @@
 
 Ce document compile les règles impératives, conventions éditoriales, architecture technique et contexte juridique nécessaires pour toute session d'assistant IA ou d'agent intervenant sur ce dépôt.
 
-Le site web principal et les documents de gouvernance se trouvent dans le sous-dossier `www.cohabitat.cc/`.
+Le site web principal et les documents de gouvernance se trouvent dans le sous-dossier `cohabitat.cc/` (dépôt officiel : [github.com/cohabitat-cc/cohabitat.cc](https://github.com/cohabitat-cc/cohabitat.cc)).
 
 ---
 
@@ -26,7 +26,7 @@ Le site web principal et les documents de gouvernance se trouvent dans le sous-d
    * L'utilisateur préfère vérifier le rendu et naviguer lui-même dans son navigateur sur `http://127.0.0.1:4000`. Ne pas lancer d'outils de test automatisé du navigateur sauf demande explicite.
 2. **Gestion de l'encodage et de la locale UTF-8 (macOS / Nix) :**
    * Jekyll sur macOS peut planter lors de la compilation avec l'erreur `invalid byte sequence in US-ASCII` si des fichiers contiennent des caractères accentués.
-   * Toujours lancer Jekyll depuis `www.cohabitat.cc/` en forçant la locale UTF-8 :
+   * Toujours lancer Jekyll depuis `cohabitat.cc/` en forçant la locale UTF-8 :
      ```bash
      LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 nix-shell -p jekyll --run "jekyll serve --host 127.0.0.1 --port 4000"
      ```
@@ -38,11 +38,11 @@ Le site web principal et les documents de gouvernance se trouvent dans le sous-d
 4. **Scripts d'automatisation du blogue (`scripts/`) :**
    * Génération instantanée de visuels LinkedIn (1200x627, ratio 1.91:1) :
      ```bash
-     .venv/bin/python scripts/generate_social_preview.py assets/images/.../image.png
+     .venv/bin/python cohabitat.cc/scripts/generate_social_preview.py cohabitat.cc/assets/images/.../image.png
      ```
    * Scaffolding complet et structuré d'un nouvel article :
      ```bash
-     .venv/bin/python scripts/new_post.py --title "Titre" --image "assets/..."
+     .venv/bin/python cohabitat.cc/scripts/new_post.py --title "Titre" --image "cohabitat.cc/assets/..."
      ```
 5. **Environnement Nix et dépendances :**
    * Utiliser Nix / `nix-shell` (ou `direnv` / `flake.nix`) pour exécuter et charger de manière consistante les dépendances de développement (Jekyll, packages, etc.) afin d'isoler l'environnement sans dépendre d'installations globales ou d'états machine non reproductibles.
@@ -97,7 +97,7 @@ Le site web principal et les documents de gouvernance se trouvent dans le sous-d
 
 ## 5. CONVENTIONS ÉDITORIALES PAR TYPE DE CONTENU
 
-### A. Articles de blogue (`www.cohabitat.cc/_posts/`)
+### A. Articles de blogue (`cohabitat.cc/_posts/`)
 * **Nom de fichier :** `_posts/YYYY-MM-DD-titre-en-kebab-case.md`.
 * **Front Matter YAML obligatoire :**
   ```yaml
@@ -124,28 +124,28 @@ Le site web principal et les documents de gouvernance se trouvent dans le sous-d
   * Le robot de prévisualisation LinkedIn exige un ratio **1.91:1 (idéalement 1200 × 627 px)**, un poids inférieur à **5 Mo**, un format **JPG ou PNG** (éviter WebP pour les crawlers sociaux) et un nom de fichier ASCII pur (sans espaces ni accents).
 * **Style rédactionnel :** Accroche en citation d'exergue (`> **« ... »**`), structure fluide avec intertitres (`###`), liens hypertextes vers les organisations citées.
 
-### B. Membres de l'équipe (`www.cohabitat.cc/membres.md`)
+### B. Membres de l'équipe (`cohabitat.cc/membres.md`)
 * Centralisé dans le front matter YAML sous la clé `members:`.
 * Chaque entrée comprend : `name`, `role`, `linkedin`, `avatar` (`/assets/images/members/...`), `bio`, `experience` (liste à puces de 3-4 faits marquants).
 * Les photos d'avatar doivent être carrées (min. 400x400 px).
 
-### C. Règlements généraux (`www.cohabitat.cc/_reglements/` et `www.cohabitat.cc/reglements.md`)
-* Décomposé en **fichiers Markdown individuels** dans `www.cohabitat.cc/_reglements/` (un fichier par article : `01-...md` à `09-...md`).
+### C. Règlements généraux (`cohabitat.cc/_reglements/` et `cohabitat.cc/reglements.md`)
+* Décomposé en **fichiers Markdown individuels** dans `cohabitat.cc/_reglements/` (un fichier par article : `01-...md` à `09-...md`).
 * Rédigé en Markdown pur (syntaxe `### X.Y Titre de clause`) sans balises HTML afin de permettre une édition immédiate par n'importe quel contributeur via l'éditeur web GitHub.
 * La page `reglements.md` assemble dynamiquement la collection Jekyll, génère le sommaire latéral et intègre un bouton d'édition directe pour chaque article.
 * L'Article 9 formalise la gouvernance ouverte et la possibilité d'amender les statuts par demande de fusion (pull request) GitHub.
 
-### D. Résolutions du Conseil d'administration & Décisions de l'Exécutif (`www.cohabitat.cc/ca/`)
-* Registre numérique formalisé des décisions du CA (`www.cohabitat.cc/ca/resolutions/`) en vertu de l'article 89.1 de la *Loi sur les compagnies du Québec (Partie III)*.
-* Délégation de gestion courante (< 5 000 $) au Comité exécutif (`www.cohabitat.cc/ca/exec/decisions/` avec nomenclature `EXEC-YYYY-XX`).
+### D. Résolutions du Conseil d'administration & Décisions de l'Exécutif (`cohabitat.cc/ca/`)
+* Registre numérique formalisé des décisions du CA (`cohabitat.cc/ca/resolutions/`) en vertu de l'article 89.1 de la *Loi sur les compagnies du Québec (Partie III)*.
+* Délégation de gestion courante (< 5 000 $) au Comité exécutif (`cohabitat.cc/ca/exec/decisions/` avec nomenclature `EXEC-YYYY-XX`).
 * Approbation par écrit via les revues GitHub (*Review > Approve*) valant signature légale.
 
-### E. Projets et Sites concrets de cohabitats (`www.cohabitat.cc/projets/`)
-* Gabarit officiel : [`www.cohabitat.cc/projets/modele-fiche-projet.md`](www.cohabitat.cc/projets/modele-fiche-projet.md) avec front matter YAML et arrimage aux résolutions CA/Exec.
+### E. Projets et Sites concrets de cohabitats (`cohabitat.cc/projets/`)
+* Gabarit officiel : [`cohabitat.cc/projets/modele-fiche-projet.md`](projets/modele-fiche-projet.md) avec front matter YAML et arrimage aux résolutions CA/Exec.
 * Toute nouvelle proposition de site est versée sous `projets/YYYY-nom-du-projet.md`.
 * Critères obligatoires d'un site : zéro case de stationnement pour auto solo (100 % mobilité active), haute mutualisation (cuisine partagée, atelier vélo), déspéculation permanente (OBNL ou FUS foncière), laïcité stricte.
 
-### F. Métadonnées SEO & Réseaux sociaux (`www.cohabitat.cc/_includes/seo.html`)
+### F. Métadonnées SEO & Réseaux sociaux (`cohabitat.cc/_includes/seo.html`)
 * **Domaine de référence absolu :** `https://cohabitat.cc`.
 * **Génération automatique et cascade d'images :**
   * Priorité : `page.linkedin_image` > `page.og_image` > `page.image` > `site.linkedin_image` > `site.og_image` > `site.image` > `/assets/images/og-cohabitat-concept.jpg`.
@@ -169,22 +169,23 @@ Le site web principal et les documents de gouvernance se trouvent dans le sous-d
 
 | Fichier / Dossier | Description |
 | :--- | :--- |
-| `www.cohabitat.cc/_posts/` | Articles du blogue |
-| `www.cohabitat.cc/_reglements/` | Articles des règlements en Markdown individuel (01 à 09) |
-| `www.cohabitat.cc/ca/resolutions/` | Registre des résolutions écrites du Conseil d'administration |
-| `www.cohabitat.cc/ca/exec/` | Décisions déléguées du Comité exécutif (< 5 000 $) |
-| `www.cohabitat.cc/.github/` | Gabarits de demandes de fusion (pull request) pour règlements et CA |
-| `www.cohabitat.cc/formation-gouvernance.md` | Manuel de gouvernance & Guide de formation des membres |
-| `www.cohabitat.cc/organisation.md` | Structure organisationnelle, délégation des pouvoirs et 5 paliers |
-| `www.cohabitat.cc/gouvernance.md` | Guide public de prise de décision par consentement et demandes de fusion (pull request) |
-| `www.cohabitat.cc/membres.md` | Liste YAML des fondateurs et membres actifs |
-| `www.cohabitat.cc/a-propos.md` | Présentation institutionnelle, statut légal REQ et 7 objets |
-| `www.cohabitat.cc/reglements.md` | Page publique assemblant la collection des règlements |
-| `www.cohabitat.cc/projets/` | Gabarit et fiches de sites de cohabitats modulaires |
-| `www.cohabitat.cc/projets.md` | Page publique de présentation des projets |
-| `www.cohabitat.cc/_includes/navbar.html` | Menu de navigation principal |
-| `www.cohabitat.cc/_layouts/default.html` | Gabarit de base et pied de page |
-| `www.cohabitat.cc/_includes/seo.html` | Métadonnées Open Graph, Twitter Cards et URLs canoniques |
-| `www.cohabitat.cc/style.css` | Feuille de style principale |
-| `www.cohabitat.cc/README.md` | Documentation publique et guide des contributeurs |
-| `walkthrough.md` | Journal de bord des changements et étapes complétées |
+| `cohabitat.cc/_posts/` | Articles du blogue |
+| `cohabitat.cc/_reglements/` | Articles des règlements en Markdown individuel (01 à 09) |
+| `cohabitat.cc/ca/resolutions/` | Registre des résolutions écrites du Conseil d'administration |
+| `cohabitat.cc/ca/exec/` | Décisions déléguées du Comité exécutif (< 5 000 $) |
+| `cohabitat.cc/scripts/` | Scripts Python d'automatisation (recadrage social, scaffolding de posts) |
+| `cohabitat.cc/.github/` | Gabarits de demandes de fusion (pull request) pour règlements et CA |
+| `cohabitat.cc/formation-gouvernance.md` | Manuel de gouvernance & Guide de formation des membres |
+| `cohabitat.cc/organisation.md` | Structure organisationnelle, délégation des pouvoirs et 5 paliers |
+| `cohabitat.cc/gouvernance.md` | Guide public de prise de décision par consentement et demandes de fusion (pull request) |
+| `cohabitat.cc/membres.md` | Liste YAML des fondateurs et membres actifs |
+| `cohabitat.cc/a-propos.md` | Présentation institutionnelle, statut légal REQ et 7 objets |
+| `cohabitat.cc/reglements.md` | Page publique assemblant la collection des règlements |
+| `cohabitat.cc/projets/` | Gabarit et fiches de sites de cohabitats modulaires |
+| `cohabitat.cc/projets.md` | Page publique de présentation des projets |
+| `cohabitat.cc/_includes/navbar.html` | Menu de navigation principal |
+| `cohabitat.cc/_layouts/default.html` | Gabarit de base et pied de page |
+| `cohabitat.cc/_includes/seo.html` | Métadonnées Open Graph, Twitter Cards et URLs canoniques |
+| `cohabitat.cc/style.css` | Feuille de style principale |
+| `cohabitat.cc/README.md` | Documentation publique et guide des contributeurs |
+| `.agents/skills/blog-post/` | Skill Antigravity pour la création et publication d'articles |
