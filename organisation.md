@@ -18,7 +18,7 @@ Chaque décision est prise au niveau le plus proche du terrain possible, tout en
 >
 > * 🎓 **[Manuel de formation à la gouvernance]({{ '/formation/' | relative_url }})** : Guide d'accueil des membres, sociocratie, objections et tutoriel pas-à-pas pour contribuer sans technique.
 > * 📜 **[Règlements généraux proposés]({{ '/reglements/' | relative_url }})** : Le texte officiel des 9 articles régissant notre personne morale sans but lucratif.
-> * 🏛️ **[Registre des décisions sur GitHub](https://github.com/cohabitat-cc/www.cohabitat.cc/tree/main/ca)** : Résolutions écrites du Conseil d'administration et décisions déléguées du Comité exécutif.
+> * 🏛️ **[Registre des décisions sur GitHub](https://github.com/cohabitat-cc/cohabitat.cc/tree/main/ca)** : Résolutions écrites du Conseil d'administration et décisions déléguées du Comité exécutif.
 > * 🌿 **[Pipeline des projets d'habitats]({{ '/projets/' | relative_url }})** : Guide et modèle officiel pour proposer un nouveau site de cohabitat.
 
 ---

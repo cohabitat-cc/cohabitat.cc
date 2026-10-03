@@ -31,10 +31,20 @@ Le site web principal et les documents de gouvernance se trouvent dans le sous-d
      LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 nix-shell -p jekyll --run "jekyll serve --host 127.0.0.1 --port 4000"
      ```
    * En arrière-plan, un processus démon Jekyll surveille le répertoire et regénère les fichiers en ~30 ms dès qu'un fichier est modifié.
-3. **Environnement Python (.venv) :**
+3. **Environnement Python (.venv) & Pillow :**
    * Un environnement virtuel `.venv` est configuré à la racine du projet (`.venv/`).
    * Toujours exécuter les commandes, scripts et outils Python via cet environnement virtuel (ex. `.venv/bin/python`, `.venv/bin/pip` ou `source .venv/bin/activate`) de façon consistante, plutôt que d'invoquer le `python3` global du système.
-4. **Environnement Nix et dépendances :**
+   * La bibliothèque `Pillow` est installée dans `.venv`. **Ne jamais utiliser l'utilitaire système macOS `sips`** qui échoue dans le sandbox IDE (erreur 13 d'accès à `/var/folders/`). Toujours utiliser les scripts Python internes.
+4. **Scripts d'automatisation du blogue (`scripts/`) :**
+   * Génération instantanée de visuels LinkedIn (1200x627, ratio 1.91:1) :
+     ```bash
+     .venv/bin/python scripts/generate_social_preview.py assets/images/.../image.png
+     ```
+   * Scaffolding complet et structuré d'un nouvel article :
+     ```bash
+     .venv/bin/python scripts/new_post.py --title "Titre" --image "assets/..."
+     ```
+5. **Environnement Nix et dépendances :**
    * Utiliser Nix / `nix-shell` (ou `direnv` / `flake.nix`) pour exécuter et charger de manière consistante les dépendances de développement (Jekyll, packages, etc.) afin d'isoler l'environnement sans dépendre d'installations globales ou d'états machine non reproductibles.
 
 ---

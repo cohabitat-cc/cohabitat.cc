@@ -12,7 +12,7 @@ ratification_ag_ref: "" # Ex: "AGA 2027" ou "Résolution écrite unanime"
 # [Nom du Projet / Site de Cohabitat]
 
 > **Gabarit officiel de proposition de projet pour COHABITAT.CC**  
-> *Copiez ce fichier sous `projets/YYYY-nom-du-projet.md` et soumettez-le via une demande de fusion (pull request) sur [GitHub](https://github.com/cohabitat-cc/www.cohabitat.cc).*
+> *Copiez ce fichier sous `projets/YYYY-nom-du-projet.md` et soumettez-le via une demande de fusion (pull request) sur [GitHub](https://github.com/cohabitat-cc/cohabitat.cc).*
 
 ---
 
@@ -131,4 +131,4 @@ ratification_ag_ref: "" # Ex: "AGA 2027" ou "Résolution écrite unanime"
 
 ---
 
-*Document soumis par demande de fusion (pull request) sur le dépôt officiel de [COHABITAT.CC](https://github.com/cohabitat-cc/www.cohabitat.cc).*
+*Document soumis par demande de fusion (pull request) sur le dépôt officiel de [COHABITAT.CC](https://github.com/cohabitat-cc/cohabitat.cc).*

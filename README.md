@@ -31,7 +31,7 @@ Ce dépôt héberge à la fois :
 Le projet est propulsé par **Jekyll** (générateur de sites statiques) avec un environnement reproductible **Nix**, sans dépendances superflues :
 
 ```text
-www.cohabitat.cc/
+cohabitat.cc/
 ├── .github/                # Gabarits de demandes de fusion (règlements, résolutions CA)
 ├── _includes/              # Composants HTML réutilisables (navbar, footer, seo, etc.)
 │   ├── navbar.html         # Menu de navigation principal
@@ -55,6 +55,7 @@ www.cohabitat.cc/
 ├── projets/                # Incubateur de projets et fiches de sites
 │   ├── README.md           # Guide de soumission de projets de sites
 │   └── modele-fiche-projet.md # Gabarit officiel pour un nouveau site
+├── scripts/                # Scripts d'automatisation (recadrage social, scaffolding de posts)
 ├── a-propos.md             # Page À propos : statut légal REQ, 7 objets et gouvernance
 ├── blogue.md               # Page d'accueil du blogue
 ├── formation-gouvernance.md # Manuel de gouvernance & Guide de formation des membres
@@ -77,11 +78,11 @@ www.cohabitat.cc/
 Nous encourageons une **gouvernance ouverte et transparente**. Que vous souhaitiez suggérer une amélioration légale, partager une réflexion sur le blogue, rejoindre l'équipe publique ou proposer un site pour un futur cohabitat, tout passe par une **demande de fusion (pull request)** sur GitHub.
 
 ### Workflow Git de base :
-1. Créez un *fork* du dépôt [cohabitat-cc/www.cohabitat.cc](https://github.com/cohabitat-cc/www.cohabitat.cc).
+1. Créez un *fork* du dépôt [cohabitat-cc/cohabitat.cc](https://github.com/cohabitat-cc/cohabitat.cc).
 2. Clonez votre fork en local :
    ```bash
-   git clone https://github.com/VOTRE_UTILISATEUR/www.cohabitat.cc.git
-   cd www.cohabitat.cc
+   git clone https://github.com/VOTRE_UTILISATEUR/cohabitat.cc.git
+   cd cohabitat.cc
    ```
 3. Créez une branche dédiée à votre proposition :
    ```bash

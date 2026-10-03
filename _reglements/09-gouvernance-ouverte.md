@@ -5,7 +5,7 @@ slug: "art-9"
 ---
 
 ### 9.1 Contrôle de version et transparence publique
-Le texte officiel des règlements généraux proposés et adoptés, les résolutions du Conseil d'administration et les fiches de projets sont versionnés publiquement dans le dépôt Git de l'organisation ([github.com/cohabitat-cc/www.cohabitat.cc](https://github.com/cohabitat-cc/www.cohabitat.cc)) sous format Markdown lisible et auditable.
+Le texte officiel des règlements généraux proposés et adoptés, les résolutions du Conseil d'administration et les fiches de projets sont versionnés publiquement dans le dépôt Git de l'organisation ([github.com/cohabitat-cc/cohabitat.cc](https://github.com/cohabitat-cc/cohabitat.cc)) sous format Markdown lisible et auditable.
 
 ### 9.2 Dépôt de propositions d'amendement par demande de fusion (pull request)
 Tout membre actif ou partie prenante peut proposer une modification, une précision ou une nouvelle clause en ouvrant une **demande de fusion (pull request)** sur la branche principale du dépôt. La proposition doit obligatoirement inclure une description motivée expliquant l'intention, le contexte socioécologique et la valeur ajoutée pour la communauté, via le gabarit de demande de fusion officiel.

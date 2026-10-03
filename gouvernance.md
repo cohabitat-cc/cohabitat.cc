@@ -55,7 +55,7 @@ En vertu de l'**article 89.1 de la Loi sur les compagnies du Québec (Partie III
 
 ### Le cycle d'une résolution du CA sur GitHub :
 
-1. **Dépôt de la proposition :** Un administrateur crée une branche et rédige un fichier Markdown dans `ca/resolutions/YYYY-MM-DD-RES-XX.md` en s'appuyant sur notre [modèle de résolution](https://github.com/cohabitat-cc/www.cohabitat.cc/blob/main/ca/resolutions/2026-00-modele-resolution.md) (attendus clairs, mandats, montants budgétaires autorisés).
+1. **Dépôt de la proposition :** Un administrateur crée une branche et rédige un fichier Markdown dans `ca/resolutions/YYYY-MM-DD-RES-XX.md` en s'appuyant sur notre [modèle de résolution](https://github.com/cohabitat-cc/cohabitat.cc/blob/main/ca/resolutions/2026-00-modele-resolution.md) (attendus clairs, mandats, montants budgétaires autorisés).
 2. **Ouverture de la demande de fusion (pull request) :** La demande est soumise avec le gabarit dédié `resolution_ca.md`.
 3. **Délibération asynchrone :** Les administrateurs peuvent poser des questions, exiger des pièces justificatives (devis, analyse juridique) ou proposer des ajustements directement sur les lignes du texte.
 4. **Consentement écrit / Signature électronique :** Chaque administrateur approuve formellement la demande de fusion via le bouton **Review changes > Approve** en inscrivant sa mention de consentement légale.
@@ -71,7 +71,7 @@ Pour garantir l'agilité de la gestion quotidienne sans alourdir le Conseil d'ad
 * **Double signature requise :** Toute décision exécutive (`EXEC-YYYY-XX`) doit recevoir l'approbation formelle d'au moins deux (2) officiers habilités via GitHub Review.
 * **Reddition de comptes :** Chaque trimestre, l'état complet des décisions exécutives est transmis au Conseil d'administration.
 
-👉 [Consulter la Politique de délégation et le registre de l'Exécutif sur GitHub](https://github.com/cohabitat-cc/www.cohabitat.cc/tree/main/ca/exec)
+👉 [Consulter la Politique de délégation et le registre de l'Exécutif sur GitHub](https://github.com/cohabitat-cc/cohabitat.cc/tree/main/ca/exec)
 
 ---
 
@@ -93,4 +93,4 @@ Les projets concrets de milieux de vie écologiques ne vivent pas dans un silo i
 > Consultez notre [**Manuel de formation à la gouvernance**]({{ '/formation/' | relative_url }}) pour un accompagnement détaillé sur la sociocratie, les objections et un guide pas-à-pas illustré.
 >
 > * [Consulter les règlements généraux proposés]({{ '/reglements/' | relative_url }})
-> * [Registre des résolutions du CA sur GitHub](https://github.com/cohabitat-cc/www.cohabitat.cc/tree/main/ca)
+> * [Registre des résolutions du CA sur GitHub](https://github.com/cohabitat-cc/cohabitat.cc/tree/main/ca)

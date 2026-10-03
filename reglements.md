@@ -19,7 +19,7 @@ image: "/assets/images/cohabitat_concept_banner.jpg"
       <div class="bylaws-pr-text">
         <strong>Document vivant &amp; collaboratif :</strong> Chaque article est modulaire. Tout membre ou partie prenante peut proposer une bonification ou un amendement directement par demande de fusion (pull request).
       </div>
-      <a href="https://github.com/cohabitat-cc/www.cohabitat.cc/tree/main/_reglements" target="_blank" rel="noopener noreferrer" class="bylaws-pr-btn">
+      <a href="https://github.com/cohabitat-cc/cohabitat.cc/tree/main/_reglements" target="_blank" rel="noopener noreferrer" class="bylaws-pr-btn">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: -2px; margin-right: 6px;"><path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z"></path></svg>
         Dossier des règlements (GitHub)
       </a>
@@ -79,7 +79,7 @@ image: "/assets/images/cohabitat_concept_banner.jpg"
         </div>
 
         <div class="article-edit-bar">
-          <a href="https://github.com/cohabitat-cc/www.cohabitat.cc/edit/main/{{ art.path }}" target="_blank" rel="noopener noreferrer" class="article-edit-btn">
+          <a href="https://github.com/cohabitat-cc/cohabitat.cc/edit/main/{{ art.path }}" target="_blank" rel="noopener noreferrer" class="article-edit-btn">
             <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M11.013 1.427a1.75 1.75 0 012.474 0l1.086 1.086a1.75 1.75 0 010 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 01-.927-.928l.929-3.25a1.75 1.75 0 01.445-.758l8.61-8.61zm1.414 1.06a.25.25 0 00-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 000-.354l-1.086-1.086zM10.05 4.51L3.924 10.635a.25.25 0 00-.064.108l-.558 1.953 1.953-.558a.245.245 0 00.108-.064l6.126-6.127L10.05 4.51z"></path></svg>
             Proposer une modification à l'Article {{ art.numero }} sur GitHub
           </a>
@@ -92,7 +92,7 @@ image: "/assets/images/cohabitat_concept_banner.jpg"
         <h3>Participer à la rédaction de nos règlements</h3>
         <p>Une question juridique, une précision sur le fonctionnement des cercles ou une idée d'amélioration pour notre charte ? Proposez une modification en quelques clics sur GitHub.</p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
-          <a href="https://github.com/cohabitat-cc/www.cohabitat.cc/tree/main/_reglements" target="_blank" rel="noopener" class="action-btn">
+          <a href="https://github.com/cohabitat-cc/cohabitat.cc/tree/main/_reglements" target="_blank" rel="noopener" class="action-btn">
             Consulter le dossier des règlements sur GitHub
           </a>
           <a href="{{ '/gouvernance/' | relative_url }}" class="btn-secondary" style="padding: 0.85rem 1.8rem; border-radius: 9999px; font-weight: 600; text-decoration: none; display: inline-block;">

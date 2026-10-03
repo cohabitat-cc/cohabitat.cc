@@ -35,7 +35,7 @@ Remplissez les différentes rubriques avec le niveau de détail actuellement con
    git commit -m "Ajout du projet de site : Nom du Projet"
    git push origin projet/nom-du-site
    ```
-3. Rendez-vous sur [GitHub](https://github.com/cohabitat-cc/www.cohabitat.cc) et ouvrez une **demande de fusion (pull request)**.
+3. Rendez-vous sur [GitHub](https://github.com/cohabitat-cc/cohabitat.cc) et ouvrez une **demande de fusion (pull request)**.
 
 ---
 

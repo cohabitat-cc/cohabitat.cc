@@ -16,8 +16,8 @@ Un modèle de village urbain décentralisé et modulaire où chaque milieu de vi
 >
 > Le réseau **COHABITAT.CC** met à disposition des porteurs de projet un cadre juridique à but non lucratif clé en main, des modèles de simulation financière et un accompagnement de pairs pour concrétiser des projets d'habitats partagés sans voiture. Toute proposition de site peut être soumise ouvertement via une **demande de fusion (pull request)** sur notre dépôt GitHub.
 >
-> * 👉 [Consulter le gabarit officiel de projet (Markdown)](https://github.com/cohabitat-cc/www.cohabitat.cc/blob/main/projets/modele-fiche-projet.md)
-> * 👉 [Explorer le dossier /projets/ sur GitHub](https://github.com/cohabitat-cc/www.cohabitat.cc/tree/main/projets)
+> * 👉 [Consulter le gabarit officiel de projet (Markdown)](https://github.com/cohabitat-cc/cohabitat.cc/blob/main/projets/modele-fiche-projet.md)
+> * 👉 [Explorer le dossier /projets/ sur GitHub](https://github.com/cohabitat-cc/cohabitat.cc/tree/main/projets)
 
 ---
 
@@ -48,7 +48,7 @@ Un milieu de vie strictement laïque, rationnel et bienveillant, administré par
 ## Comment soumettre un projet de site ?
 
 1. **Télécharger le gabarit :**  
-   Téléchargez le modèle officiel [`projets/modele-fiche-projet.md`](https://github.com/cohabitat-cc/www.cohabitat.cc/blob/main/projets/modele-fiche-projet.md) sur GitHub et documentez les grandes lignes du site identifié.
+   Téléchargez le modèle officiel [`projets/modele-fiche-projet.md`](https://github.com/cohabitat-cc/cohabitat.cc/blob/main/projets/modele-fiche-projet.md) sur GitHub et documentez les grandes lignes du site identifié.
 
 2. **Renseigner les paramètres clés :**  
    Précisez la localisation, la typologie d'unités, les équipements mutualisés et l'état d'avancement des démarches foncières.

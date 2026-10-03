@@ -4,3 +4,5 @@ _site/
 .direnv/
 .sass-cache/
 .DS_Store
+__pycache__/
+*.pyc
