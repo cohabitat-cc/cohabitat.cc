@@ -4,7 +4,7 @@ titre: "Objets statutaires et mission sociale"
 slug: "art-2"
 ---
 
-À des fins strictement sociales, écologiques, communautaires, scientifiques, civiques et éducatives, sans intention de gain pécuniaire pour ses membres, les objets de la personne morale sont les suivants :
+À des fins strictement sociales, écologiques, communautaires, civiques et éducatives, sans intention de gain pécuniaire pour ses membres, les objets de la personne morale sont les suivants :
 
 ### 2.1 Développement et gestion d'habitats écologiques partagés
 Développer, construire, acquérir, rénover, financer et administrer des ensembles immobiliers à but non lucratif dédiés au cohabitat écologique, favorisant des espaces privatifs compacts combinés à des infrastructures mutualisées de haute performance environnementale et acoustique.
