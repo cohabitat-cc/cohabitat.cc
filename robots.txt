@@ -1,0 +1,13 @@
+---
+layout: null
+permalink: /robots.txt
+---
+{%- assign site_domain = site.url | default: "https://cohabitat.cc" -%}
+{%- if site_domain contains "localhost" or site_domain contains "127.0.0.1" or site_domain == "" -%}
+  {%- assign site_domain = "https://cohabitat.cc" -%}
+{%- endif -%}
+User-agent: *
+Allow: /
+
+# Sitemap officiel
+Sitemap: {{ site_domain }}/sitemap.xml

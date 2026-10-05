@@ -1,0 +1,40 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+{%- assign site_domain = site.url | default: "https://cohabitat.cc" -%}
+{%- if site_domain contains "localhost" or site_domain contains "127.0.0.1" or site_domain == "" -%}
+  {%- assign site_domain = "https://cohabitat.cc" -%}
+{%- endif -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Page d'accueil et pages institutionnelles -->
+{%- for page in site.pages -%}
+  {%- unless page.sitemap == false or page.url contains "assets" or page.url contains "brand-guide" or page.url contains "modele" or page.url contains "404" or page.name contains ".xml" or page.name contains ".txt" or page.name contains ".png" or page.name contains ".ico" or page.name contains ".webmanifest" or page.name contains ".json" or page.name contains "LICENSE" or page.name contains "CNAME" -%}
+    {%- if page.url contains ".html" or page.url contains "/" %}
+  <url>
+    <loc>{{ site_domain }}{{ page.url | replace:'index.html','' }}</loc>
+    {%- if page.last_modified_at %}
+    <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+    {%- elsif page.date %}
+    <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+    <changefreq>{% if page.url == "/" or page.url == "" %}weekly{% else %}monthly{% endif %}</changefreq>
+    <priority>{% if page.url == "/" or page.url == "" %}1.0{% elsif page.url contains "projets" or page.url contains "blogue" %}0.8{% else %}0.6{% endif %}</priority>
+  </url>
+    {%- endif -%}
+  {%- endunless -%}
+{%- endfor %}
+
+  <!-- Articles de blogue -->
+{%- for post in site.posts -%}
+  {%- unless post.sitemap == false or post.published == false %}
+  <url>
+    <loc>{{ site_domain }}{{ post.url }}</loc>
+    <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {%- endunless -%}
+{%- endfor %}
+</urlset>
