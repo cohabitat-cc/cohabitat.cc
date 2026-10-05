@@ -12,14 +12,42 @@ layout: default
 
 <section class="members-section">
   <div class="site-container">
+    {% if page.notice %}
+    <div class="members-notice-box">
+      <div class="members-notice-badge">{{ page.notice.badge | default: "Avis" }}</div>
+      <div class="members-notice-content">
+        <p>{{ page.notice.text }}</p>
+        {% if page.notice.link_url %}
+          <a href="{{ page.notice.link_url }}" class="members-notice-link">{{ page.notice.link_text | default: "En savoir plus &rarr;" }}</a>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% assign trimmed_content = content | strip %}
+    {% if trimmed_content != "" %}
+    <div class="members-intro-content">
+      {{ content }}
+    </div>
+    {% endif %}
+
     <div class="members-grid">
       {% for member in page.members %}
-      <article class="member-card">
+      <article class="member-card {% if member.is_recruiting %}member-card-recruiting{% endif %}">
         <div class="member-avatar-wrapper">
-          {% if member.avatar %}
+          {% if member.avatar and member.avatar != "" %}
             <img src="{{ member.avatar | relative_url }}" alt="{{ member.name }}" class="member-avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="member-avatar-fallback" style="display: none;">
               {{ member.name | slice: 0, 1 }}
+            </div>
+          {% elsif member.is_recruiting %}
+            <div class="member-avatar-fallback member-avatar-recruiting" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="8.5" cy="7" r="4"></circle>
+                <line x1="20" y1="8" x2="20" y2="14"></line>
+                <line x1="23" y1="11" x2="17" y2="11"></line>
+              </svg>
             </div>
           {% else %}
             <div class="member-avatar-fallback">
@@ -32,7 +60,7 @@ layout: default
           <div class="member-header">
             <h2 class="member-name">{{ member.name }}</h2>
             {% if member.role %}
-              <span class="member-role">{{ member.role }}</span>
+              <span class="member-role {% if member.is_recruiting %}member-role-recruiting{% elsif member.role == 'Membre' %}member-role-member{% else %}member-role-founder{% endif %}">{{ member.role }}</span>
             {% endif %}
           </div>
 
@@ -40,7 +68,7 @@ layout: default
 
           {% if member.experience %}
           <div class="member-experience">
-            <h4 class="member-experience-title">Expérience clé</h4>
+            <h4 class="member-experience-title">{{ member.experience_title | default: "Expérience clé" }}</h4>
             <ul class="member-experience-list">
               {% for exp in member.experience %}
                 <li>{{ exp }}</li>
@@ -49,14 +77,19 @@ layout: default
           </div>
           {% endif %}
 
-          {% if member.linkedin %}
           <div class="member-footer">
-            <a href="{{ member.linkedin }}" target="_blank" rel="noopener noreferrer" class="member-linkedin-btn">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.65 1.65 0 0 0-1.66 1.66 1.66 1.66 0 0 0 1.66 1.66 1.66 1.66 0 0 0 1.66-1.66 1.65 1.65 0 0 0-1.66-1.66Z"/></svg>
-              <span>Profil LinkedIn</span>
-            </a>
+            {% if member.action_url %}
+              <a href="{{ member.action_url }}" class="member-action-btn">
+                <span>{{ member.action_text | default: "Nous contacter" }}</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            {% elsif member.linkedin %}
+              <a href="{{ member.linkedin }}" target="_blank" rel="noopener noreferrer" class="member-linkedin-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.65 1.65 0 0 0-1.66 1.66 1.66 1.66 0 0 0 1.66 1.66 1.66 1.66 0 0 0 1.66-1.66 1.65 1.65 0 0 0-1.66-1.66Z"/></svg>
+                <span>Profil LinkedIn</span>
+              </a>
+            {% endif %}
           </div>
-          {% endif %}
         </div>
       </article>
       {% endfor %}
@@ -64,7 +97,7 @@ layout: default
 
     <div class="members-cta-box">
       <h3>Envie de rejoindre l'aventure ?</h3>
-      <p>Nous agrandissons le cercle des membres et bâtisseurs de cohabitat.cc au fur et à mesure de notre développement.</p>
+      <p>Que ce soit pour vous investir comme <strong>3ᵉ co-administrateur·trice</strong> au sein du CA provisoire ou comme <strong>membre</strong> d'un futur projet de cohabitat, venez co-construire avec nous.</p>
       <a href="mailto:joindre@cohabitat.cc" class="action-btn">Nous contacter</a>
     </div>
   </div>
