@@ -46,6 +46,9 @@ Le site web principal et les documents de gouvernance se trouvent dans le sous-d
      ```
 5. **Environnement Nix et dépendances :**
    * Utiliser Nix / `nix-shell` (ou `direnv` / `flake.nix`) pour exécuter et charger de manière consistante les dépendances de développement (Jekyll, packages, etc.) afin d'isoler l'environnement sans dépendre d'installations globales ou d'états machine non reproductibles.
+6. **Périmètre des recherches et outils d'inspection (Grep / Find) :**
+   * **Restreindre impérativement le périmètre à `cohabitat.cc/` :** Le workspace parent contient d'autres projets volumineux (comme `OpenConstructionERP/` avec des catalogues et changelogs de milliers de lignes). Ne jamais lancer de recherche globale non filtrée à la racine du workspace.
+   * **Cibler par type de fichier et termes contextuels :** Toujours spécifier un filtre de fichiers (ex. `Includes: ["*.md"]` ou `*.html`) et utiliser des termes contextuels précis (ex. `"règlement 1.2"` ou `"### 1.2"`). Ne jamais chercher de chaînes numériques génériques ou isolées (comme `"1.2"` ou `"1.3"`) qui engendrent un bruit massif et inutile (valeurs CSS, numéros de version, etc.).
 
 ---
 
