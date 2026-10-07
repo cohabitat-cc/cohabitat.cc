@@ -21,7 +21,7 @@ description: "Retour sur la visite de la coopérative Le Trapèze au complexe Ha
 
 Transformer une rupture brutale en levier de résilience collective : c’est l’aventure humaine et urbaine derrière la [Coopérative d’habitation Le Trapèze](mailto:selection@coopletrapeze.com). Née dans la foulée de l’expulsion de la Coop-sur-Généreux en juillet 2016 sur le Plateau Mont-Royal, la démarche a culminé près de dix ans plus tard avec l’emménagement des membres dans un complexe neuf au cœur du projet [Haleco](https://haleco.ca/).
 
-La visite des lieux était organisée par [Lykka](https://www.lykka.org/), représentée par Raphaël Gonçalves (membre de l'organisme [Présâges](https://www.presages.org/) et de Lykka). Nous y avons été accueillis par [Patricia M. Gagné](https://www.linkedin.com/in/patriciamgagne) — présidente du conseil d’administration du Trapèze, secrétaire du conseil d’administration de [Village Urbain](https://villageurbain.org/) et dernière des cofondatrices d’origine à habiter les lieux —, ainsi que par Sylvie C., membre active du comité de sélection de la coopérative.
+La visite des lieux était organisée par [Lykka](https://www.lykka.org/), représentée par Raphaël Gonçalves (membre de l'organisme [Présâges](https://www.presages.org/) et de Lykka). Nous y avons été accueillis par [Patricia M. Gagné](https://www.linkedin.com/in/patriciamgagne) — présidente du conseil d’administration du Trapèze, secrétaire du conseil d’administration de [Village Urbain](https://villageurbain.org/) et dernière des cofondatrices d’origine à habiter les lieux —, ainsi que par Sylvie Coulombe, secrétaire du conseil d'administration et représentante du comité de sélection de la coopérative.
 
 Aux côtés d'autres figures fondatrices comme [Pascal Huynh](https://villageurbain.org/a-propos/) et Mathieu Rhéaume, ce groupe a porté le projet à bout de bras. Bien que ce parcours de 2016 à aujourd'hui n'ait pas encore fait l'objet d'une documentation systématique (un projet à venir, espérons-le !), les apprentissages tirés de ces six années de développement (2019–2025) offrent un éclairage précieux sur les rouages du logement communautaire et du cohabitat densifié.
 
@@ -47,7 +47,7 @@ L’accessibilité économique demeure au cœur de la mission du Trapèze :
 
 * **Diversité typologique (40 logements) :** **8 studios**, **20 logements 3½**, **8 logements 4½** et **4 logements 5½**, abritant une communauté intergénérationnelle comptant près d'une **dizaine d'enfants**.
 * **Soutien au loyer :** La convention d’exploitation exige une proportion de suppléments au loyer (PSL) située entre **50 % et 80 %**, avec une cible fixée à **60 % des ménages**. Ces derniers consacrent **25 % de leur revenu brut** au logement.
-* **Compétences et inclusion :** Le comité de sélection, représenté notamment par Sylvie C., valorise la mixité des profils et recrute activement des membres capables de prendre en charge des mandats clés (notamment en finances et comptabilité), assurant une gestion autonome et pérenne.
+* **Compétences et inclusion :** Le comité de sélection, représenté notamment par Sylvie Coulombe, valorise la mixité des profils et recrute activement des membres capables de prendre en charge des mandats clés (notamment en finances et comptabilité), assurant une gestion autonome et pérenne.
 
 ---
 
